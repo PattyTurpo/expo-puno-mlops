@@ -1,8 +1,8 @@
 {
   "current_champion": {
-    "version": "v1",
-    "timestamp": "2026-10-21 03:22:25",
-    "train_file": "data/splits/train_v1.csv",
+    "version": "v2",
+    "timestamp": "2026-10-21 08:36:59",
+    "train_file": "data/splits/train_current.csv",
     "train_rows": 4407,
     "architecture": "StackingRegressor (Polynomial + KNN + Lasso -> Ridge)",
     "best_hyperparameters": {
@@ -15,11 +15,11 @@
     "baseline_ols_r2": 0.2888,
     "metrics": {
       "r2": 0.8314,
-      "rmse": 146843.43,
-      "mae": 26897.13
+      "rmse": 146843.38,
+      "mae": 26897.88
     },
     "promoted": true,
-    "reason": "PROMOVIDO: R2 (0.8314) supera el control de calidad (Champion previo: None)."
+    "reason": "PROMOVIDO: R2 (0.8314) supera el control de calidad (Champion previo: 0.8314)."
   },
   "history": [
     {
@@ -43,6 +43,28 @@
       },
       "promoted": true,
       "reason": "PROMOVIDO: R2 (0.8314) supera el control de calidad (Champion previo: None)."
+    },
+    {
+      "version": "v2",
+      "timestamp": "2026-10-21 08:36:59",
+      "train_file": "data/splits/train_current.csv",
+      "train_rows": 4407,
+      "architecture": "StackingRegressor (Polynomial + KNN + Lasso -> Ridge)",
+      "best_hyperparameters": {
+        "knn_k": 7,
+        "knn_weights": "distance",
+        "lasso_alpha": 100.0,
+        "ridge_alpha": 10.0
+      },
+      "cv_5fold_r2": -12.5609,
+      "baseline_ols_r2": 0.2888,
+      "metrics": {
+        "r2": 0.8314,
+        "rmse": 146843.38,
+        "mae": 26897.88
+      },
+      "promoted": true,
+      "reason": "PROMOVIDO: R2 (0.8314) supera el control de calidad (Champion previo: 0.8314)."
     }
   ]
 }
