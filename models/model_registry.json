@@ -1,7 +1,7 @@
 {
   "current_champion": {
-    "version": "v6",
-    "timestamp": "2026-10-21 19:46:13",
+    "version": "v7",
+    "timestamp": "2026-10-21 20:05:25",
     "train_file": "data/splits/train_v2.csv",
     "train_rows": 5876,
     "architecture": "StackingRegressor (Polynomial + KNN + Lasso -> Ridge)",
@@ -16,10 +16,10 @@
     "metrics": {
       "r2": 0.9063,
       "rmse": 109450.69,
-      "mae": 23251.06
+      "mae": 23251.07
     },
     "promoted": true,
-    "reason": "PROMOVIDO: R2 (0.9063) supera el control de calidad (Champion previo: 0.8314)."
+    "reason": "PROMOVIDO: R2 (0.9063) supera el control de calidad (Champion previo: 0.9063)."
   },
   "history": [
     {
@@ -153,6 +153,28 @@
       },
       "promoted": true,
       "reason": "PROMOVIDO: R2 (0.9063) supera el control de calidad (Champion previo: 0.8314)."
+    },
+    {
+      "version": "v7",
+      "timestamp": "2026-10-21 20:05:25",
+      "train_file": "data/splits/train_v2.csv",
+      "train_rows": 5876,
+      "architecture": "StackingRegressor (Polynomial + KNN + Lasso -> Ridge)",
+      "best_hyperparameters": {
+        "knn_k": 7,
+        "knn_weights": "distance",
+        "lasso_alpha": 100.0,
+        "ridge_alpha": 10.0
+      },
+      "cv_5fold_r2": 0.7801,
+      "baseline_ols_r2": -2.2047,
+      "metrics": {
+        "r2": 0.9063,
+        "rmse": 109450.69,
+        "mae": 23251.07
+      },
+      "promoted": true,
+      "reason": "PROMOVIDO: R2 (0.9063) supera el control de calidad (Champion previo: 0.9063)."
     }
   ]
 }
